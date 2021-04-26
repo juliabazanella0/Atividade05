@@ -24,7 +24,7 @@
         android:id="@+id/chooseRecipientFragment"
         android:name="com.example.atividade05.ChooseRecipientFragment"
         android:label="fragment_chooser_recipient"
-        tools:layout="@layout/fragment_chooser_recipient" >
+        tools:layout="@layout/fragment_choose_recipient" >
         <action
             android:id="@+id/action_chooseRecipientFragment_to_specifyAmountFragment"
             app:destination="@id/specifyAmountFragment" />

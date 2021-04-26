@@ -1,17 +1,13 @@
 package com.example.atividade05
 
 import android.os.Bundle
-import android.text.TextUtils
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.Toast
-import androidx.core.os.bundleOf
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import kotlinx.android.synthetic.main.fragment_chooser_recipient.view.*
+import kotlinx.android.synthetic.main.fragment_choose_recipient.view.*
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -25,7 +21,7 @@ class ChooseRecipientFragment : Fragment(), View.OnClickListener{
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_chooser_recipient, container, false)
+        return inflater.inflate(R.layout.fragment_choose_recipient, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
