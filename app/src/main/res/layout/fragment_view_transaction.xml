@@ -10,18 +10,17 @@
 
     <!-- Food -->
     <TextView
+        android:id="@+id/title_food"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Food"
-        android:id="@+id/title_food"
-        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/food"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias=".25"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:textSize="28sp"
-        app:layout_constraintHorizontal_bias=".25"
-        app:layout_constraintVertical_bias=".1667"
-        />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".1667" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -40,18 +39,17 @@
 
     <!-- Data -->
     <TextView
+        android:id="@+id/title_data"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Data"
-        android:id="@+id/title_data"
-        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/data"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias=".25"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:textSize="28sp"
-        app:layout_constraintHorizontal_bias=".25"
-        app:layout_constraintVertical_bias=".3333"
-        />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".3333" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -70,17 +68,16 @@
 
     <!-- Rent -->
     <TextView
+        android:id="@+id/title_rent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Rent"
-        android:id="@+id/title_rent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/rent"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias=".25"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:textSize="28sp"
-        app:layout_constraintHorizontal_bias=".25"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -99,18 +96,17 @@
 
     <!-- Candles -->
     <TextView
+        android:id="@+id/title_candles"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Candles"
-        android:id="@+id/title_candles"
-        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/candles"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias=".25"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:textSize="28sp"
-        app:layout_constraintHorizontal_bias=".25"
-        app:layout_constraintVertical_bias=".6667"
-        />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".6667" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -129,18 +125,17 @@
 
     <!-- Utility -->
     <TextView
+        android:id="@+id/title_utility"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Utility"
-        android:id="@+id/title_utility"
-        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/utility"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias=".25"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:textSize="28sp"
-        app:layout_constraintHorizontal_bias=".25"
-        app:layout_constraintVertical_bias=".8334"
-        />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".8334" />
 
     <TextView
         android:layout_width="wrap_content"

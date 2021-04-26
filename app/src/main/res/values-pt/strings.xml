@@ -1,4 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">atividade05</string>
+    <string name="user_name">Nome do Usuario</string>
+    <string name="password">Senha</string>
+    <string name="login">Conecte-se</string>
+    <string name="next">Próximo</string>
+    <string name="cancel">Cancelar</string>
+    <string name="name">Nome</string>
+    <string name="amount">Quantidade</string>
+    <string name="send">Enviar</string>
+    <string name="food">Comida</string>
+    <string name="rent">Aluguel</string>
+    <string name="candles">Velas</string>
+    <string name="utility">Utilidades</string>
+    <string name="data">Dados</string>
+    <string name="view_transactions">Ver transações</string>
+    <string name="send_money">Enviar dinheiro</string>
+    <string name="view_balance">Ver balanco</string>
 </resources>

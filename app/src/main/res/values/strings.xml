@@ -1,5 +1,21 @@
 <resources>
     <string name="app_name">activity05</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="user_name">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="next">Next</string>
+    <string name="cancel">Cancel</string>
+    <string name="name">Name</string>
+    <string name="amount">Amount</string>
+    <string name="send">Send</string>
+    <string name="food">Food</string>
+    <string name="rent">Rent</string>
+    <string name="candles">Candles</string>
+    <string name="utility">Utility</string>
+    <string name="data">Data</string>
+    <string name="view_transactions">View Transactions</string>
+    <string name="send_money">Send money</string>
+    <string name="view_balance">View Balance</string>
 </resources>

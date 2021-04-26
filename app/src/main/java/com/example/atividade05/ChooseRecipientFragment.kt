@@ -11,14 +11,19 @@ import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import kotlinx.android.synthetic.main.fragment_chooser_recipient.view.*
 
-class ChooseRecipientFragment : Fragment(), View.OnClickListener {
+private const val ARG_PARAM1 = "param1"
+private const val ARG_PARAM2 = "param2"
 
-    lateinit var navController: NavController
+
+class ChooseRecipientFragment : Fragment(), View.OnClickListener{
+
+    var navController: NavController? = null
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_chooser_recipient, container, false)
     }
@@ -26,8 +31,8 @@ class ChooseRecipientFragment : Fragment(), View.OnClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         navController = Navigation.findNavController(view)
-        view.findViewById<Button>(R.id.next_btn).setOnClickListener(this)
-        view.findViewById<Button>(R.id.cancel_btn).setOnClickListener(this)
+        view.next_btn.setOnClickListener(this)
+        view.cancel_btn.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -35,7 +40,8 @@ class ChooseRecipientFragment : Fragment(), View.OnClickListener {
             R.id.next_btn -> {
                 navController!!.navigate(R.id.action_chooseRecipientFragment_to_specifyAmountFragment)
             }
-            //R.id.cancel_btn -> activity!!.onBackPressed()
+            R.id.cancel_btn -> activity?.onBackPressed()
+
         }
     }
 }
