@@ -17,4 +17,7 @@
     <string name="view_transactions">Ver transacciones</string>
     <string name="send_money">Enviar dinero</string>
     <string name="view_balance">Ver balance</string>
+    <string name="register">Grabadora</string>
+    <string name="confirm_password">Confirmar seña</string>
+    <string name="logout">Salir</string>
 </resources>

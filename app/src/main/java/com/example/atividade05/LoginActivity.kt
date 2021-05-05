@@ -1,38 +1,87 @@
 package com.example.atividade05
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
-import android.widget.Button
-import android.widget.EditText
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_login.* // Nessa linha a gente usa o plugin instalado pra inflar a main activity
+import androidx.room.Room
+import com.example.atividade05.database.AppDatabase
+import com.example.atividade05.database.daos.PersonDAO
+import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
+    private lateinit var dao: PersonDAO
+
+    fun createDB() {
+        // Create DB instance
+        val db = Room.databaseBuilder(
+            this,
+            AppDatabase::class.java,
+            "person-db"
+        )
+            .allowMainThreadQueries()
+            .build()
+
+        // Get DAO
+        dao = db.personDao()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
-
-        btLogin.setOnClickListener { login() }
-    }
-
-    private fun login() {
-        var login = txtLogin.text.toString()
-        var senha = txtSenha.text.toString()
-
-        if(!validaLogin(login, senha)) {
-            Toast.makeText(this, "Dados Inválidos", Toast.LENGTH_SHORT).show()
-            return;
+        if(isLoggedIn()){
+            iniciarMain()
+            return
         }
 
-        val mainIntent = Intent(this, MainActivity::class.java).apply {
+        setContentView(R.layout.activity_login)
+        createDB()
+
+        btLogin.setOnClickListener{
+
+            val username = txtLogin.text.trim().toString()
+            val password = txtSenha.text.trim().toString()
+            val person = dao.findByName(username, password)
+
+            if (person != null) {
+
+                val sharedPref = getSharedPreferences("login", Context.MODE_PRIVATE)
+                with (sharedPref.edit()) {
+                    person?.id?.let { it1 -> putLong("personId", it1) }
+                    commit()
+                }
+                val highScore = sharedPref.getLong("personId", 0)
+
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+
+            }
+            else{
+                Toast.makeText(this, "Dados Inválidos", Toast.LENGTH_LONG).show();
+            }
+
+        }
+        tvRegister.setOnClickListener{
+            val intent = Intent( this, RegisterActivity::class.java)
+            startActivity(intent)
+
+        }
+
+    }
+
+    private fun isLoggedIn(): Boolean{
+        val id = this.getSharedPreferences("login", Context.MODE_PRIVATE)
+                .getLong("personId", 0)
+
+        return !id.equals(0L)
+    }
+
+    private fun iniciarMain(){
+        var intent = Intent( this, MainActivity::class.java).apply {
             flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
         }
-        startActivity(mainIntent)
-    }
 
-    private fun validaLogin(login: String, senha: String): Boolean {
-        return login == "Julia" && senha == "5565"
+        startActivity(intent)
     }
 }

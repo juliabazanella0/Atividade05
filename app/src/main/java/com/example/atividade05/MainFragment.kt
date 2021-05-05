@@ -35,4 +35,8 @@ class MainFragment : Fragment(), View.OnClickListener {
             R.id.view_balance_btn -> navController!!.navigate(R.id.action_mainFragment_to_viewBalanceFragment)
         }
     }
+
+    private fun logout(){
+
+    }
 }
